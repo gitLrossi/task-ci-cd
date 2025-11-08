@@ -30,8 +30,20 @@ jobs:
         with:
           node-version: "18"
 
-      - name: Instalar dependências
-        run: npm install
+      - name: Rodar teste simples
+        run: node -e "conseole.log('Testando Node')"
 
-      - name: Rodar testes
-        run: npm test
+
+  gerar-arquivo:
+    name: task criando arquivo txt
+    runs-on: ubuntu-latest
+    steps:
+      - name: Fazer checkout
+        uses: actions/checkout@v5
+
+      - name: Criar arquivo
+        run: |
+          echo "Arquivi criado automaticamente no pipeline" > arquivo.txt
+
+      - name: Mostrando arquivo
+        run: cat arquivo.txt

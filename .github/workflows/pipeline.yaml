@@ -2,16 +2,36 @@ name: pipeline pra task
 on: push
 
 jobs:
-  ci-continious-integracion:
-    name: task CI e CD
+  instalando-zip:
+    name: task Zip install
     runs-on: ubuntu-latest 
     steps:
-      - run: echo "Olá, Usuario!"
-        name: Mensagem especial
-      - uses: actions/checkout@v5
-        name: Fazendo checkout no maquina virtual
-      - run: sudo apt-get install zip
-        name: Instalar o zip
-      - run: zip -r arquivos.zip .
-        name: Zipar os aruivos do meu repositório 
+      - name: Mensagem especial
+        run: echo "Olá, Usuario! A instalação ira começar"
         
+      - name: Fazendo checkout no maquina virtual
+        uses: actions/checkout@v5
+      
+      - name: Instalar o ZIP
+        run: sudo apt-get install zip
+      
+      - name: Zipar os aruivos do meu repositório 
+        run: zip -r arquivos.zip .
+
+  instalando-node-testando:
+      name: task Node install
+      runs-on: ubuntu-latest
+      steps:
+      - name: Fazer checkout
+        uses: actions/checkout@v5
+
+      - name: Instalar Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "18"
+
+      - name: Instalar dependências
+        run: npm install
+
+      - name: Rodar testes
+        run: npm test

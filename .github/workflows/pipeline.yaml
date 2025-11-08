@@ -1,0 +1,17 @@
+name: pipeline pra task
+on: push
+
+jobs:
+  ci-continious-integracion:
+    name: task CI e CD
+    runs-on: ubuntu-latest 
+    steps:
+      - run: echo "Olá, Usuario!"
+        name: Mensagem especial
+      - uses: actions/checkout@v5
+        name: Fazendo checkout no maquina virtual
+      - run: sudo apt-get install zip
+        name: Instalar o zip
+      - run: zip -r arquivos.zip .
+        name: Zipar os aruivos do meu repositório 
+        

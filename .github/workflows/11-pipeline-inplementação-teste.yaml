@@ -9,6 +9,7 @@ jobs:
   on-push:
     runs-on: ubuntu-latest
     steps:
-      - name: Inicializacao
       - run: echo "Iniciando processos da pipeline!"
+        name: Inicializacao
+      - uses: actions/checkout@v5
       

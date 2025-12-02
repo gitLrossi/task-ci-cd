@@ -1,0 +1,14 @@
+name: Git Hub Actions - Push - Inplementação de pipeline funcional para teste
+on:
+  push:
+    branches:
+      - main
+      - develop
+
+jobs:
+  on-push:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Inicializacao
+      - run: echo "Iniciando processos da pipeline!"
+      

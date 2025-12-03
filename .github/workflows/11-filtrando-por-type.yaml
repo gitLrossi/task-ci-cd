@@ -1,0 +1,21 @@
+name: GitHub Actions - Push - Types Template
+run-name: Running - ${{ github.event_name }}
+
+on:
+  pull_request:
+    types: # Pode ser um dos 3, dois ou apenas um msm:
+      - opened
+      - reopened
+      - closed
+    branches:
+      - main
+    paths:
+      - '**.md'
+
+jobs:
+  on-push:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Comentario
+        run: echo "Comentario PULL-REQUEST Workflow - type"
+            echo "Executado!"

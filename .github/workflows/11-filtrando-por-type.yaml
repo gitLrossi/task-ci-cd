@@ -17,5 +17,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Comentario
-        run: echo "Comentario PULL-REQUEST Workflow - type"
+        run: |
+            echo "Comentario PULL-REQUEST Workflow - type"
             echo "Executado!"

@@ -4,7 +4,7 @@ on: [workflow_dispatch]
 
 jobs:
   on-workflow_dispatch:
-    runs-on: ununtu-latest
+    runs-on: ubuntu-latest
     steps: 
       - name: Comentário
         run: echo "Comentário WORKFLOW DISPATCH - Básico"

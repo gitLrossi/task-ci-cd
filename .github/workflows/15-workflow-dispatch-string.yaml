@@ -15,4 +15,4 @@ jobs:
       - name: Comentário 
         run: |
           echo "Comentário WORKFLOW DISPATCH - Boleano"
-          echo "A série favorita é: ${{inputs.resposta}}"
+          echo "A série favorita é: ${{inputs.opiniao}}"

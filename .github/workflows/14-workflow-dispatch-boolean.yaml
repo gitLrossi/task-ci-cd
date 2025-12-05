@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
     inputs:
       resposta: # esta chave voce coloca o que quiser 
-        description: Qual foi a melhor a meteria que voce teve?
+        description: Essa foi a melhor a meteria que voce teve?
         type: boolean
 
 jobs: 
@@ -14,4 +14,4 @@ jobs:
       - name: Comentário 
         run: |
           echo "Comentário WORKFLOW DISPATCH - Boleano"
-          echo "Melhor matéria que cursei: ${{inputs.resposta}}"
+          echo "Resposta: ${{inputs.resposta}}"

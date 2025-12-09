@@ -6,7 +6,7 @@ on:
     - cron: '0 19 * * 2' # 19h em ponto nas terças
     - cron: '59 23 31 12 *' # 23h 59m do dia 31 de dezembro
     - cron: '07 13 9 12 *' #13h e 07m, dia 9 de dez
-    - cron: '/2 * * * *' # a cada 2 min
+    - cron: '2 * * * *' # a cada 2 min
 
 jobs:
   teste_schedule:

@@ -2,11 +2,11 @@ name: Git Hub Actions - Cron job Template
 run-name: Running - ${{ github.event_name }}
 on:
   schedule:
-    - cron: '30 5 * * 1,3' # 5h e 30min nas segundas e quartas
-    - cron: '0 19 * * 2' # 19h em ponto nas terças
-    - cron: '59 23 31 12 *' # 23h 59m do dia 31 de dezembro
-    - cron: '07 13 9 12 *' #13h e 07m, dia 9 de dez
-    - cron: '32 * * * *' # sempre aos 32 min
+    #- cron: '30 5 * * 1,3' # 5h e 30min nas segundas e quartas
+    #- cron: '0 19 * * 2' # 19h em ponto nas terças
+    #- cron: '59 23 31 12 *' # 23h 59m do dia 31 de dezembro
+    #- cron: '07 13 9 12 *' #13h e 07m, dia 9 de dez
+    - cron: '45 * * * *' # sempre aos 45 min
 
 jobs:
   teste_schedule:

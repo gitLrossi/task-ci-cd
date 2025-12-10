@@ -7,4 +7,4 @@ jobs:
     runs-on: ubuntu-latest
     steps: 
       - name: Comentario
-        run: echo "trigger finalizado"
+        run: echo Trigger finalizado"

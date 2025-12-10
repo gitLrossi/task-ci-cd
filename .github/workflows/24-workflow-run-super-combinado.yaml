@@ -1,0 +1,13 @@
+name: GitHub Actions - Workflow run Super combinado Template
+run-name: Running - Workflow run Super combinado Template
+on:
+  workflow_run:
+    workflows: [Trigger]
+    types: [requested, in_progress, completed]
+
+jobs:
+  quando_trigger_for_disparado:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Comentario
+        run: echo "Workflow run Super combinado foi Trigado"

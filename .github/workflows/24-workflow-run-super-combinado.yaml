@@ -10,4 +10,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Comentario
-        run: echo "Workflow run Super combinado foi Trigado"
+        run: echo "Workflow run Super combinado foi trigado"
